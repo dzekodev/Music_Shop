@@ -3,18 +3,26 @@ import { Button } from '@material-ui/core';
 import { useState } from 'react'
 import { cartStore } from '../Redux/store';
 import * as ActionsType from '../Redux/ActionsType'
-var total = 1;
 function BuyCart(){
     const [showCart,setShowCart] = useState(true);
     cartStore.dispatch({
         type : ActionsType.RETURN_CARTS
     })
     console.log("cart data" , [...cartStore.getState()]);
+
+    const sum = (items, prop)=>{
+        return items.reduce( function(a, b){
+            return a + b[prop];
+        }, 0);
+    };
+    let total = sum([...cartStore.getState()],"price")
+    
     return showCart===false ? (
         <Button onClick={()=>setShowCart(true)} id="open" variant="contained" color="secondary">Open Cart</Button>
-    ) : total===0 ?(
+    ) : [...cartStore.getState()].length===0 ?(
         <div>
             <h1>the cart is empty</h1>
+            <h2>Total : 0 $</h2>
             <Button onClick={()=>setShowCart(false)} id="open" variant="contained" color="secondary">Close Cart</Button>
         </div>
     ):(
@@ -27,13 +35,7 @@ function BuyCart(){
                         <h4>{item.price} $</h4>
                     </div>
                 ))}
-                {[...cartStore.getState()].length!==0?
-                    (
-                        <h2>Total : {[...cartStore.getState()].map((item)=>total = total+ item.price)} $</h2>
-                    ):(
-                        <h2>Total : 0 $</h2>
-                    )
-                }
+                <h2>Total : {total} $</h2>
             </ul>
 
 

@@ -41,10 +41,10 @@ function AddSongs(){
                 }
              />
             <label htmlFor="raised-button-file">
-            <Button className="frm" 
-                 component="span" >
-                Upload Song Image
-            </Button>
+                <Button className="frm" 
+                    component="span" >
+                    Upload Song Image
+                </Button>
             </label> 
 
 
