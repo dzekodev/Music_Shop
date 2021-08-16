@@ -16,6 +16,8 @@ function reducer(state=[...InitialArray],action){
                     sold:action.payload.sold 
                 }
             ]
+        default:
+            return state;
     }
 }
 export default reducer

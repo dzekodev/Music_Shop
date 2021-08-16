@@ -32,7 +32,7 @@ function Music(){
                 <ul>
                     {
                         data.map(item => (
-                            <div>
+                            <div key={item.id}>
                                 <MusicItem 
                                     img={item.img}
                                     title={item.title}

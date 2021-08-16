@@ -1,6 +1,6 @@
 import '../styles/BuyCart.css'
 import { Button } from '@material-ui/core';
-import {useEffect, useState} from 'react'
+import { useState } from 'react'
 import { cartStore } from '../Redux/store';
 import * as ActionsType from '../Redux/ActionsType'
 var total = 1;
@@ -22,12 +22,12 @@ function BuyCart(){
             <ul className="ul">
                 { 
                 [...cartStore.getState()].map(item=>(
-                    <div key={item.title} className="cartCon">
+                    <div key={item.id} className="cartCon">
                         <li>{item.title}</li>
                         <h4>{item.price} $</h4>
                     </div>
                 ))}
-                {[...cartStore.getState()].length!=0?
+                {[...cartStore.getState()].length!==0?
                     (
                         <h2>Total : {[...cartStore.getState()].map((item)=>total = total+ item.price)} $</h2>
                     ):(
