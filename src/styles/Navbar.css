@@ -1,0 +1,36 @@
+nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(53, 28, 28);
+}
+nav img{
+    width: 100px;
+    height: 50px;
+}
+nav div{
+    display: flex;
+    justify-content: space-around;
+    
+    font-size: 15px;
+    width: 50%;
+}
+#btn{
+    background-color: blanchedalmond;
+}
+#link{
+    width: 150px;
+    cursor: pointer;
+    color: blanchedalmond;
+    list-style: none;
+    text-decoration: none;
+}
+#link:hover{
+    color: rgb(255, 160, 18);
+    padding-bottom: 10px;
+    font-size: 19px;
+    transition: all 0.2s ease-in-out;
+    border-bottom:solid 1px blanchedalmond;
+    border-left:solid 1px blanchedalmond;
+    border-right:solid 1px blanchedalmond;
+}

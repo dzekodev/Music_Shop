@@ -1,0 +1,18 @@
+#open{
+    margin-top: 10px;
+    box-shadow: 2px 2px 10px 2px rgb(139, 14, 14);
+}
+.cartCon{
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+.cartCon h4{
+    margin: 0;
+    padding: 0;
+    margin-left: 20px;
+}
+.ul{
+    text-align: center;
+    margin: auto;
+}

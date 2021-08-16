@@ -1,0 +1,18 @@
+.MusicItemsContainer ul{
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: auto;
+    list-style: none;
+}
+#btnAdd{
+    background-color: rgb(32, 32, 66);
+    color: yellow;
+    width: 60%;
+    text-align: center;
+    position: relative;
+    bottom: 18px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
